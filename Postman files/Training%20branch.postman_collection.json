@@ -1,0 +1,61 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Training branch",
+		"_postman_id": "b58c1dc6-4383-ca56-95fa-cc4b572e8afc",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search Results",
+			"request": {
+				"url": " https://api.dezrez.com/api/simplepropertyrole/search?APIKey=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguZGV6cmV6LmNvbS9BcGlLZXlJc3N1ZXIiLCJhdWQiOiJodHRwczovL2FwaS5kZXpyZXouY29tL3NpbXBsZXdlYmdhdGV3YXkiLCJuYmYiOjE0Njc5NjU3NDUsImV4cCI6NDYyMzYzOTM0NSwiSXNzdWVkVG9Hcm91cElkIjoiNDg5ODI4IiwiQWdlbmN5SWQiOiI4Iiwic2NvcGUiOlsiaW1wZXJzb25hdGVfd2ViX3VzZXIiLCJwcm9wZXJ0eV9iYXNpY19yZWFkIl19.8HsZkJLPqWDnpItYlszcwiy9_9dxC3ZVlABqq0mEggI",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Rezi-Api-Version",
+						"value": "1.0",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  MinimumPrice: 0,\n  MaximumPrice:,\n  MinimumBedrooms:0,\n  MaximumBedrooms:10,\n  BranchIdList:[],\n  RoleTypes: [\"Selling\", \"Letting\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Full Details",
+			"request": {
+				"url": " https://api.dezrez.com/api/simplepropertyrole/253723?APIKEY=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguZGV6cmV6LmNvbS9BcGlLZXlJc3N1ZXIiLCJhdWQiOiJodHRwczovL2FwaS5kZXpyZXouY29tL3NpbXBsZXdlYmdhdGV3YXkiLCJuYmYiOjE0Njc5NjU3NDUsImV4cCI6NDYyMzYzOTM0NSwiSXNzdWVkVG9Hcm91cElkIjoiNDg5ODI4IiwiQWdlbmN5SWQiOiI4Iiwic2NvcGUiOlsiaW1wZXJzb25hdGVfd2ViX3VzZXIiLCJwcm9wZXJ0eV9iYXNpY19yZWFkIl19.8HsZkJLPqWDnpItYlszcwiy9_9dxC3ZVlABqq0mEggI",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Rezi-Api-Version",
+						"value": "1.0",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

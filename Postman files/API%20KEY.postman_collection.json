@@ -1,0 +1,114 @@
+{
+	"variables": [],
+	"info": {
+		"name": "API KEY",
+		"_postman_id": "f7e6913c-13fb-5fcf-ca71-fce999cff686",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API KEY",
+			"request": {
+				"url": "https://api.dezrez.com/api/agency/apikey?subjectId=50601",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Rezi-Api-Version",
+						"value": "1.0",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonbody = JSON.parse(responseBody);\r\npostman.setGlobalVariable(\"token\",jsonbody.access_token);\r\ntests[\"Token Set\"] = globals.token === jsonbody.access_token;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://api.dezrez.com/api/agency/apikey?subjectId=50601",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlBZMWVqZlVpSWhmM1c0M3FxcmhQWU5aVTd6ZyJ9.eyJpc3MiOiJodHRwczovL2F1dGguZGV6cmV6LmNvbS9Jc3N1ZXIiLCJhdWQiOiJSZXppQ2xpZW50QVBJIiwibmJmIjoxNDM3NDY4MTI2LCJleHAiOjE0Mzc0NzUzMjYsImNsaWVudF9pZCI6IlJlemkgU1BBIiwic2NvcGUiOiJpbXBlcnNvbmF0ZV91c2VyIiwic3ViIjoiNGVjYzljNDItNTgyMS00OWZhLTk4YzEtYzRiYTM3MWFhYzA5IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXIiOiI0ZWNjOWM0Mi01ODIxLTQ5ZmEtOThjMS1jNGJhMzcxYWFjMDkiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoic3RlcGhlbndvcmxvY2tAY291bnRyeXByb3BlcnR5LmNvLnVrIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoic3RlcGhlbndvcmxvY2tAY291bnRyeXByb3BlcnR5LmNvLnVrIiwiQWdlbmN5SWQiOiIxNCIsIkhvbWVCcmFuY2hJZCI6IjQxMzAxIiwiaHR0cDovL2lkZW50aXR5c2VydmVyLnRoaW5rdGVjdHVyZS5jb20vY2xhaW1zL2lkZW50aXR5cHJvdmlkZXIiOiJodHRwOi8vaWQuZGV6cmV6LmNvbS9Jc3N1ZXIifQ.e4aEss_hsmmOd7VcOGETI9OMMciCSre1X3xToiM4cMjJkqXCA0hslC9i5b7K82ABz-TSDI4IJ1T7qTq3Pey_NTcvyvfHbQhPQlEeDJNJ6spR1yudaBje9AHrpkFjKmA4DEVx-DyzlmN9HqNm7ZObqRpbs6Sw_CA4wPQI0pdyu1NUB4JhFVgDDzxZegS1bKc2HPgTfmkx0w0cbW9zNWx8lHB55OvSlGkKqxVw0Drq9ioxLZ3wUV7jkojUTmkfuHfP2GhMOhyAlvztJhr_yfFi9ynH0i0O2rhlvRg4s7DuNFj3Icf0eDRetyN8keg8NacmT66kLt-n7JIinIxk_cJt_w",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Rezi-Api-Version",
+						"value": "1.0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Auth uat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": "var jsonbody = JSON.parse(responseBody);\r\npostman.setGlobalVariable(\"token\",jsonbody.access_token);\r\ntests[\"Token Set\"] = globals.token === jsonbody.access_token;"
+					}
+				}
+			],
+			"request": {
+				"url": "https://core-api-uat.dezrez.com/api/agency/apikey?subjectId=412522",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IlBZMWVqZlVpSWhmM1c0M3FxcmhQWU5aVTd6ZyJ9.eyJpc3MiOiJodHRwczovL2F1dGgtdWF0LmRlenJlei5jb20vSXNzdWVyIiwiYXVkIjoiUmV6aUNsaWVudEFQSSIsIm5iZiI6MTQ0NzY4MDg1OSwiZXhwIjoxNDQ3Njg4MDU5LCJjbGllbnRfaWQiOiJSZXppIFNQQSIsInNjb3BlIjoiaW1wZXJzb25hdGVfdXNlciIsInN1YiI6ImU1OWQ1MDI4LTRhNTMtNDdmOS05MjU4LWM5OTM0NTUzMWIzNCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWVpZGVudGlmaWVyIjoiZTU5ZDUwMjgtNGE1My00N2Y5LTkyNTgtYzk5MzQ1NTMxYjM0IiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZSI6InBhdWxAam9obmxha2UuY28udWsiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJwYXVsQGpvaG5sYWtlLmNvLnVrIiwiQWdlbmN5SWQiOiIzNSIsIkhvbWVCcmFuY2hJZCI6IjQxMTgwMSIsImh0dHA6Ly9pZGVudGl0eXNlcnZlci50aGlua3RlY3R1cmUuY29tL2NsYWltcy9pZGVudGl0eXByb3ZpZGVyIjoiaHR0cDovL2lkLXVhdC5kZXpyZXouY29tL0lzc3VlciJ9.i0XQmDAWpGsGI0nHZwBPDc3mtCm6d5URVWKQXnjs8MCFZCBZ30hLjFxV1fKVBX7Xh_PjSFCoKwHJGbfQRQo2cO_2w9ujo9pJXLdf494rG71n_sxlV5PeegrOFFkDf1xpcfZIO9ePA35paP6eSjSIf4j1gfZWEjt1cmPG380g22ZATzGkpqXozBHmZQYQ50_E2CBQDfJ2KNNpRGvLI8U2zkSPWO574sCTa0xawealEXPIHkLX_r552Wt-L5aYsdTDfBFe530dh23X27k7qzlfmyX3JHeJTsNDWLXOix3gNp3o1fLUyBxraLr5b7nIfKLPKQ8hFvmeCZAsUPRCzB4yTw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Rezi-Api-Version",
+						"value": "1.0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

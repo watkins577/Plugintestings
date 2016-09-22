@@ -45,16 +45,29 @@
         }
 
     } 
+	
+	function getUrlParameterStringWithout(sParam)
+	{
+		var sPageURL = window.location.search.substring(1);
+		
+		var newsPageURL = '';
 
-          
+        var sURLVariables = sPageURL.split('&');
 
-          
+        for (var i = 0; i < sURLVariables.length; i++) 
 
-         var MiniPrice = getUrlParameter('minprice');
+        {
 
-         var MaxiPrice = getUrlParameter('maxprice');
+            var sParameterName = sURLVariables[i].split('=');
+			
+			if (sParameterName[0] != sParam) {
+				newsPageURL += "&" + sParameterName[0] + "=" + sParameterName[1];
+			}
 
-         var MinBed = getUrlParameter('MinimumBedrooms');
+        }
+		
+		return newsPageURL;
+	}
 
          var page = getUrlParameter('page');
 
@@ -82,7 +95,7 @@
 
 				hrefTextPrefix: '?page=',
 
-				hrefTextSuffix: '&proptype=&priceorder=&minprice='+MiniPrice+'&maxprice='+MaxiPrice+'&bedrooms='+MinBed+'',
+				hrefTextSuffix: getUrlParameterStringWithout(page),
 
 				prevText: 'Prev',
 

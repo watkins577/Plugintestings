@@ -95,7 +95,7 @@
 
 				hrefTextPrefix: '?page=',
 
-				hrefTextSuffix: getUrlParameterStringWithout(page),
+				hrefTextSuffix: getUrlParameterStringWithout('page'),
 
 				prevText: 'Prev',
 

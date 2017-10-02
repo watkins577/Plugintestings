@@ -239,13 +239,13 @@ propertyApp.controller('FullDetails', function($scope, $http, $timeout, $filter)
 			$scope.statusClass = 'neutral';
 			if (data.Flags.filter(function(v) {
 					return v.SystemName == "Reduced"
-				}) > 0) {
+				}).length > 0) {
 				$scope.useStatus = 'Reduced';
 				$scope.statusClass = 'reduced';
 			}
 			if (data.Flags.filter(function(v) {
 					return v.SystemName == "OfferAccepted"
-				}) > 0) {
+				}).length > 0) {
 				$scope.useStatus = 'Sold STC';
 				$scope.statusClass = 'red';
 			}
@@ -254,7 +254,7 @@ propertyApp.controller('FullDetails', function($scope, $http, $timeout, $filter)
 			$scope.statusClass = 'neutral';
 			if (data.Flags.filter(function(v) {
 					return v.SystemName == "OfferAccepted"
-				}) > 0) {
+				}).length > 0) {
 				$scope.useStatus = 'Let Agreed';
 				$scope.statusClass = 'red';
 			}
